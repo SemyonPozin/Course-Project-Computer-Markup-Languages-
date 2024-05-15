@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: grid;
+    align-content: center;
+    font-family: protosans56;
+    color: white;
+    background-color: black;
+}
+
+#root header:first-child {
+    padding-left: 12px;
+    grid-column: 1/4;
+}
+
+.head-right {
+    grid-column: 4/5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-content: center;
+}
+
+.header-right {
+    display: none;
+    align-content: center;
+    grid-column: 4/5;
+    justify-content: center;
+}
+
+/* Стиль ссылок шапки */
+header a {
+    /* color: rgba(202, 50, 151, 0.8); */
+    padding: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+
+}
+
+header a:hover {
+    /* color: rgba(202, 50, 151, 0.8); */
+    color: rgb(106, 163, 185);
+}
+
+#headlink {
+    font-family: Circe Bold;
+    font-size: 21px;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(36, 34, 34);
+    /* background-color: rgb(20, 143, 192); */
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.line {
+    height: 2px;
+    width: 60%;
+    background-color: rgb(20, 143, 192);
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+.onas div p {
+    font-family: Circe Bold;
+    font-size: 18px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+
+._animate-items {
+    transform: translate(0, 50px);
+    opacity: 0;
+    transition: 0.8s ease 0s;
+    font-family: "Circe Bold";
+}
+
+._activeScroll {
+    transform: translate(0, -0px);
+    opacity: 1;
+}
+
+.zakaz {
+    color: azure;
+    border: azure solid 2px;
+    border-radius: 10px;
+    background-color: rgb(106, 163, 185);
+    font-family: Circe Bold;
+    width: 100px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 30px;
+    justify-self: center;
+    margin: 30px 0;
+    zoom: 120%;
+    box-shadow: inset 2px 1px 5px 4px rgb(77, 119, 136);
+}
+
+.zakaz:hover {
+    zoom: 130%;
+    margin-top: 23px;
+}
+
+.order_form{
+    background-color: black;
+    color: azure;
+    font-family: Circe Bold;
+    padding: 7%;
+    border-radius: 10px;
+    /* width: 30vw; */
+    /* text-align: center; */
+    border: azure 4px solid;
+    display: block;
+    grid-column: 3/9;
+}
+
+.form label{
+    display: inline-block;
+    margin-left: 5px;
+    padding-bottom: 3%;
+    padding-top: 20px;
+}
+
+form input, form select{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+input{
+    margin-left: 30%;
+    border-radius: 5px;
+    color: azure;
+}
+
+input[type="text"]{
+    /* background-color: rgb(36, 34, 34); */
+    background-color: rgb(72, 75, 75);
+    border: 1px solid rgb(106, 163, 185);
+}
+
+input[type="submit"]{
+    border: 1px solid rgb(106, 163, 185);
+    background-color: rgb(106, 163, 185);
+}
+
+select{
+    margin-left: 15%;
+    border: 1px solid rgb(106, 163, 185);
+    color: rgb(106, 163, 185);
+    background-color: black;
+}
+
+.for_form form .red_border{
+    border: rgb(131, 11, 11) 1px solid;
+}
+
+.for_form{
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column: 1/2;
+    justify-content: center;
+    display: none;
+    width: 100vw;
+
+}
+
+.for_form form .closeButtonlb{
+    display: grid;
+    justify-content: end;
+}
+
+.closeButtondiv{
+    width: min-content;
+}
+
+ .active_link{
+    border-bottom: rgb(189, 51, 177) 1px solid;
+}
+
+footer{
+    background-color: black;
+    color: azure;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: Circe Bold;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo{
+    margin-left: 12px;
+    grid-column: 1/4;
+}
+
+@media (min-width: 540px) and (max-width: 1020px){
+    /* .order_form{
+        grid-column: 1/4;
+        border: none;
+        border-radius: 0;
+        font-size: 30px;
+    } */
+
+    /* input{
+        font-size: 30px;
+    } */
+
+    .for_form{
+        z-index: 5;
+    }
+
+    input, select{
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 540px) {
+
+    /* .logo{
+        margin-left: 12px;
+        grid-column: 1/4;
+    } */
+
+    header {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #headlink {
+        display: none;
+    }
+
+    .header-right {
+        display: grid;
+    }
+
+    .head-right {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        width: 200px;
+        background-color: black;
+        display: block;
+        z-index: 3;
+    }
+
+    .header-right:hover #headlink {
+        position: relative;
+        text-align: center;
+        display: block;
+    }
+
+    .header-right:hover .hamb {
+        display: none;
+    }
+
+    #headlink {
+        color: azure;
+        font-family: protosans56;
+    }
+
+    .hamb {
+        display: grid;
+        align-content: center;
+        font-size: 220%;
+        position: absolute;
+        justify-content: center;
+        margin-left: 50%;
+        top: 4px;
+        right: 12px;
+    }
+
+    .order_form{
+        grid-column: 1/11;
+        border: none;
+        border-radius: 0;
+    }
+
+    input, select{
+        margin-left: 30%;
+    }
+
+    .for_form{
+        z-index: 5;
+    }
+}
+
+@media (max-width: 370px){
+    input, select{
+        /* margin-left: 10%; */
+        width: 140px;
+    }
+}
+
+@media (max-width: 300px) {
+    .onas div p {
+        font-size: 12px;
+    }
+}
+
+
+@media (min-width: 940px){
+    .order_form{
+        grid-column: 4/8;
+    }
+}
+
+@media (min-width: 1220px){
+    .order_form{
+        grid-column: 3/6;
+    }
+}
