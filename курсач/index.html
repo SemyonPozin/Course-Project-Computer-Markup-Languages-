@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="general.css" rel="stylesheet" media="all" />
+    <link href="index.css" rel="stylesheet" media="all" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="for_form" style="display: none">
+        <form id="order-form" class="order_form">
+          <label class="closeButtonlb">
+            <div onclick="closeForm()" class="closeButtondiv">
+              &#x2715;
+              <button class="hamburger-button hamb" style="border-top: none; border-left: none;">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="black" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 8H28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 16H28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 24H28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div> 
+            </label
+          ><br />
+          <label>
+            Имя: <br />
+            <input name="name" type="text" /> </label
+          ><br />
+          <label>
+            Фамилия: <br />
+            <input name="surname" type="text" /><br />
+          </label>
+          <label>
+            Номер телефона: <br />
+            <input name="cellphone" type="text" /> </label
+          ><br />
+          <label>
+            Электронная почта: <br />
+            <input name="mail" type="text" /> </label
+          ><br />
+          <label>
+            Услуга: <br />
+            <select>
+              <option>Перевозка грузов</option>
+              <option>Помощь с дачными вопросами</option>
+              <option>Продажа жб колец</option>
+            </select> </label
+          ><br />
+          <label>
+            <input value="Оставить заявку" type="submit" />
+          </label>
+        </form>
+      </div>
+      <header>
+        <div class="logo">MaxAuto</div>
+        <div class="header-right">
+          <div class="head-right">
+            <div><a id="headlink" href="index.html">Главная</a></div>
+            <div><a id="headlink" href="uslugi.html">Услуги</a></div>
+            <div><a id="headlink" href="contacts.html">Контакты</a></div>
+            <div>
+              <a id="headlink" onclick="orderForm()">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="mainsecimg">
+          <img
+            src="imagestruck-SRrdw3jCT-transformed.jpeg"
+            alt=""
+            id="main_img"
+          />
+          <h2 class="mainzag _animate-items">Грузоперевозки</h2>
+          <div class="menucard" id="uslugilink" onclick="link('uslugi.html')">
+            Услуги
+          </div>
+          <div
+            class="menucard"
+            id="contactslink"
+            onclick="link('contacts.html')"
+          >
+            Контакты
+          </div>
+          <div class="menucard" id="zakazlink" onclick="orderForm()">
+            Сделать заказ
+          </div>
+        </section>
+        <section class="onas">
+          <div>
+            <h1 class="_animate-items">О нас</h1>
+          </div>
+          <div class="line"></div>
+          <div>
+            <p id="text1"></p>
+          </div>
+          <div>
+            <p id="text2"></p>
+          </div>
+        </section>
+        <section class="autopark">
+          <div class="forh1 _animate-items">
+            <h1>Наша техника</h1>
+          </div>
+          <div class="auto">
+            <div class="autoimg">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTea9iZTEYkIR2WSDGPfF1I8ro7J72NRBO2Zg&usqp=CAU"
+                id="autoimg1"
+              />
+            </div>
+            <div class="autotable">
+              <table>
+                <tr>
+                  <td>Модель</td>
+                  <td>Man L2000</td>
+                </tr>
+                <tr>
+                  <td>Грузоподъемность кузова</td>
+                  <td>6 т</td>
+                </tr>
+                <tr>
+                  <td>Длина кузова</td>
+                  <td>5.20 м</td>
+                </tr>
+                <tr>
+                  <td>Ширина кузова</td>
+                  <td>2.5 м</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="auto">
+            <div class="autoimg">
+              <img
+                src="https://d2e5b8shawuel2.cloudfront.net/vehicle/287352/hlb/original.jpg"
+                id="autoimg2"
+              />
+            </div>
+            <div class="autotable">
+              <table>
+                <tr>
+                  <td>Модель</td>
+                  <td>Man 26.403</td>
+                </tr>
+                <tr>
+                  <td>Грузоподъемность кузова</td>
+                  <td>15 т</td>
+                </tr>
+                <tr>
+                  <td>Длина кузова</td>
+                  <td>8.20 м</td>
+                </tr>
+                <tr>
+                  <td>Ширина кузова</td>
+                  <td>2.5 м</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="auto">
+            <div class="autoimg">
+              <img
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVEhgVFRUVGRgZGBgaGBgcGBgcGRgYGhgaGhoYHBocIS4lHB4sIRgaJjgmLS8xNTU1GiQ7QDs2QC40NTEBDAwMEA8QHBISGjEhISE0NDQxNDQ0NDQ0MTQ0NDQxNDQ0NDE0NDQxNDQ0NDQ0NDQ0NDQ0NDQ0MTQxNDExNDExMf/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAgMEBQYBBwj/xABIEAACAQIEAgYGBwUGAwkAAAABAhEAAwQSITEFQQYiMlFhcROBkaGxwQdCUmKSstEVI1NyghRDosLS8CQz4SU0NVVjg5PT8f/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAcEQEBAQEBAQEBAQAAAAAAAAAAAREhAjESQWH/2gAMAwEAAhEDEQA/AN3czz1Rp6u4958q51520g/Z8YnXy2qVFcigjEP4bH1nXbw23NdXPIkQJM7THWg/lqRFEUEcZurIP3oy76aanbf3UkF42E5TvHa5RB23qVFcigbMzsI7519kfOm2zSYGmkTEfVnnP2qkRRFBHJaD1TPLs9w7z3zRcLxoOZ7tpMbnyp+K6RtQR3zaQOeu20jv8J2o62nPUzttIjn3SafiiKCKM+kjziO5fnm9lPxS4oigRFEUuKIoERRFLiiKBEURS4oigRFEUuKIoERRFLiiKBEV2KVFEUCYoilRRFAmKIpcURQJiiKVFdigRFFLiuUC4oilxXIoExXIpcURQIiiKXFEUCIoilRRFAmKCKVFBFAmKIpbKAJYhR3sY929RG4nYByqXuN9lAT8P+lWS1NiRFAtk6gHz5e2m8+IfsW1tD7Txn9mpFRsVwd27d/M28EMR8flVxNP3L6L2nQf1An2CajvxO0PrMfJT84qrxXCMQn1Aw70M+7te6qq5dKmG6pG4bQ+w1chtaNuMJyRj5kD9aYfjR5IPWSfhFUQvj7Q91d9L404nVweMv3J7D8zTX7YuT2hr91f0qsDTXbqaA+P+/jTg0WC4nmOVwBOxG0+NWcVlMMsrWlwLlrYJ32PqrNah6K7FdiiKiuRRFKiiKBMURSooigTFEUqKIoExRFKiuxQIiu0qKKBcURS4oigRFcilxRFAiKIpcURQIiiKk2ba/W57Dw7zT4IGwA/331ZNS3EI2XgkKT3DQT6zUYYS+29xLY7kUu/4mgA+Qq0Z6QWqyYluq9eDWZlw9xu93J/wiB7qn21CjKqqo7lAUewVScS47kOW3lYjdjJUeAAIn21QYvjznRr+XwBVPh1vfV1MbphPMgcwI19e9MWlm6PV8Z+VecPxRCe0rHvLyfaTNavoxxBnHWVnymJEMYKneTJ38alqyNcUqNiMDbcQ6K0bZlDR5TMVBxPGbNsQWYOYC2yCtxyTAVUeNzz2GpJABqwweINxFcRDDY7g7EEiRIMjSiq670cw7bWbX4EPyqFd6L4cb4a0fJF/StKG7wfZPw1pwMDoD6qgx46OYMmDYQHu6yn2Ag1Q9JOiGHZ0VGu25VtUuPyI5MSDvXpj2QwhlBFV2L4RbcgnMpAMEE6TGwMjlQYfo/0YfC3Cr3nuo+XJmLhlOoOubbUbd21a2xYCCFmJnUzVbhcQ5xDWXbNkcgEAAkDUE+qKs0vTcKFSCBO8yKWEpcURS4oiopEURS4oigRFdilRRFAmKIpUV2KBEURS4oigRFFLiigXFcilxRFAiKIpcURQIim8ReVFzMYHx8BT8VjumODxl5wMNcXKgUOmUDKzHncY6kiOqBIEd4oLTHdJSF6iqAB2nk+4ER7aocL06KO/p7lu4v1FResvgcpbTzNY3H8DxYc+ks33gwWyvcE/dYSPZTVjgmIfs2X/qXKP8UVvKxsa7HfSQ21qz62IH6/Cs9jumWLufXyjuUcvXp7qcs9DsQe0baDxYsfYoj31NtdC0+vec/yKF+Oar+an6jLXse79u458CxA/CIHuqKmphBJ7lEn2CvQrPRrDJ/dhj3uS3uOnuqellEEIqqO5QAPYK1PKawGF4JffdCg+0/V/wAO/ur0fozhQmAQKSpyE5lJUks4AMqe5vhUHEGAT3SfZV3wu3lwVtTyTDj3qx/JWfUxrzVRxNxhmGJQTcg28z9clCrNlzPJAzAbEaTVTwXpbd9IiZLYQuZyB0Yh3JPWVvvaSDsKuOli/wDDf1/5HrCcJb98h++v5hWK1Hs9jiBkDM6yQP3iKyydB1kII82qyFx461sMJI6pB2MTDRHtNUmJcC2+n1H/ACmtGNj4E+/X50pEb+1KNyyfzAqPawyn1GpAaQCCrDvH+zTmWorYRCScoBkdZZVjtuVg1FZzGIF4iTljMiN6+ss6fyirTFIBf05qflUDjFjLirRzMZQiSQSMrDSY+9zqwxIPplJjsnl4edKFRRFKiiKBMURSooigTFEUqKIoExRFKiiKBMURSooigTFFKiigciiKVFEUCYoilRRFAiKx1vil48XbDKV9HmNx+r1jksqRry6ypW0isTwTDk8Vxt4qwVUyKSCAxZwCVJ31tMKs+p6+NnYMJPmfjVaOHuAIZToO0v6VaXRltkdyH3LXYrrrmrbGAGucLPILIHn51UYpArMByYgeo1onvIDBdQe4sAfZWVxmLTOxBLdZuyrPzP2QasqUlqbao1ziGulm8RrrkC+5yDSsNj0dcyGY0I5qe4jkaupiLxR4tOe5G/Ka1zpltKo+0i+xH/QVjuLYoZQh3cqgHM5mAOnka2ePaLaEfxP8jn51y9Xrp5VXGcILlsIxgO+UkbjMrCR461m+D9Dodbj35CXCCqpBb0bldy2gOXu51psVcPUn+In5o+dKwbnIwH8W7+dqzWk3EsPRv/I3wNaZDIY9/wDpFZF0lT5H4Vq8Jqg8Qv5VpSJFJPP1fGursK4efl+tRVH0iT95YbuZx7cp/wAtScSP3ieIPwpHSBerbPdcHvVv0p7FDr2/I/lNSkciiKXFEVQiKIpcURQIiiKXFEUCYoilRXYoERRFLiiKBEUUuKKBcVyKXFEUCIoilxRFAiKx+AxzKcR6a6ltTiHFsPAJt53JdesJBZn117JHKtnFZDjPRR8TczpdVE60BlJYZnZmAiNMzEjXnVn1PRvivSTDhHUY5y5VggVFK5o0BK29j/NVdb6bYZ0y3MPdZ9nUsGSe8Z329VOW/oySQXxLtBkAJEfiY1YWPo7witmZrzk7y4APqVRV2pxmMd0ysFTat4S2mbZldQysNVaETQgjvqow/Sa+CUZkJUnrFesQdROsc+6vTrXQzArr6AE/edz8WqbZ4BhU1XDWQe/IpPtIp048cxHH77EgO88sqoB7hNRkwuJJzrbvFm7ZVXgjeSR3a171bsIvZRF8lA+FMcVaMPc/kf3qRTP9V4pgEf01ssjwLiEkq2gDgkkkbRXs+EuI9sgobikg6BWWQq953FZm1w5DbmNd6tuC8WS1bKMrkhjqAsagHmRWfXCK/jF66mKt2rXDXdGyfvMzIqMWgsxWQoXQ99X+D6P2ktgNmZpZmYNcALMSzELmMCSYGvrp5eO2eZYean5TTycWsnZ/aGHxFZ1TJ4IkQHuAea/ErNWFoASBsCAPABVptcdaO1xPxCfZTlu4pJhgdeRHcK0FhT30Hn5frS6S21BXcbSba+DqfiPnXcR27fkfymnOKj93/UvxprEdu35H8prN+rPhyKIpcURWkIiiKXFEUCIoilxRFAiKIpcURQIiiKXFEUCYopUUUDkURXYoig5FcilRRFBwCssvS2woyBL7svVIS3PWG8EkTWrFYVP7TkUCwsBQAzYi0NIBBiCRrBg8hyqxKMf9Ilm1ObD4iYLQwVTA02k1TYj6WlC5kwdw+bweXIL41F6TdHr+JbNnwluLYQK2ILbHcsFnnVHZ6DAAC7jMABrIFxzvEalR3U0xa3vpcvkSmFtrqO055z3MO6kW/pLxjuyZbCBY1VSx9hYx66gYjoXhYAGPwiGZMLnmPAkd9PYbo3g0uMzcSRs3JbB09YfWoZGoOL4o8f8AEWVmcxGSLfUFzr9QkdVh37imbq47JnvYliud1ZAG62R8jAkKFAJHrFNtibGmbiWIMAAZbZXQZSNv5V9gqNiGwjsGXE4m7cB6mcdWSwzalZHM771RrcIP3Y8qjcPw5dm/mPugfKpOFP7v+mmuEX8pn7z/AJjWfVa8rUcGrv7II5VMXiy04vFENYaVjcNbuqMOGnM0qDty8Kf4r0zwmHuKl65lZgCvVYzJgaqDzFWPD+K2rql0MqxBB2kZV76CqGFdeyWX+UlfyxSg99Ro7+ti35prQC+h7qHylWMDY/CmooHx11lCsw1ynsjz5RVpcn0lue4/lNReLKoy5Y3FSC03LQ8D+U0l6fxOiiK7FEV0ZciiK7FEUHIoiuxXYoExRFdiiKDkURXYoig5FFdiigciiKXFEUCIoilxRFAg7V443R8nU4nCCddbhkT/AE17Iw0PlXlfHuibWFJsWLmJYAT1/Rg/aOY6CKClxPRxJBbHYNdBu7cjP2aS3A8NpPEcKI8SeR8qz9/EsxBbh0xsTfY+wik+n6v/AIcu+3pn2796I0J4Pg9zxPD+pSf89dXhGCzD/tO1OwAtEzJH/qVnDiT/AOWr/wDNc/1UpcUYn9nrIOg9Nc9s5qK1Y4Tg+ePnysH/AF0f2LCJDW8S7uCMq+jyg666yY0k+qqPAJib0m3wsuF3Iv3YBPKS29XvDOAYh8/pME+GYAZHDXLxJMz1c8aeI50RsMNcHohqNq5w/gl50DpdtBSXIVrbyOswMsHg6g8hWXTguNHVXEMPFsKw+L1ruD429atpaZlYoCGPoL8lpJbsrl3J2qeospz9hYkbNYPrdf8AKaQ3B8XyXDn/AN5//qq8w+MdvqA/0XV/MlTrbsd1A9Z+ais2Na864z0Iv4h1dhlZQF6l4QQCSJDWx3mrDA8LxNpMgsuwWNQ9nXqjXVxz1rQce6S4fBgekYlyJW2olyO+CQAPEkVWYTptaey17IygZjkL2vSHKOS54kxprzqXk6SW/Da28SN8PeA781g/C4amXLzi2y+ivyVI7BbWPuzVav0l4bnYxI9Vn5XKfT6RsId0vj+lfk9XzE01iscQQWS+ozQCbF4CdeeSrfD4xHv2wpM5W0KsPqnvFZ/jXTrDPbUIt1mDgxkA0ysJkmOdc6NdKLd3EqrB0hWOZyirttObfWknV3jexRFMpj7Ldm7bPk6n50+jg7EHyM1tlyKIpcURQIiiKXFEUCIoilxRFAiKIpcURQIiu0qKKBVFFFAUUUUFfxq66YW81uc62rjJAk5gjFYEGTMaV5PwvjvEruHBv3H62dXRrSo2XUadQHUV7HeMISeQPwrIPiVZQEJhxJGaY5Qe7f3UHieOx15XIV3Ayg6IGEz3/Ko/7Tvx/wAxuW9nzpXF0AfXJ2Y6zOp0b7ulQQRG68tr5HfzNBKPFr0f80bne2fDwpyxxW6zqvpFOZgOwwJ1Gg003qECY0Lbns4hO4czUvAK3pEn0kSSZdWGgnWN6DZ8G6T4rDWzbsKhUsXMozHMYGpDDkoqyTptxAmCtgDmTbfQfjqz6PYRP7LZDInWyyzIp0diZk+BqdiuE2xoLdlz3BUJI56TvTUxa8HxJuKjmOsitptqAdPCr/DN1fW35jWWwt/0ZZQAAiiBlImAAVAnSJpWC4w6dqGEtpsRLHY1m3fjU41yvTWOxa2rT3X7KKznyUTA8eVM4PHJcEqfMcx5is39JeM9Hw9hPbdFPkJuH8keupFseO9IuO3Lt52Jl3OZzvlnZF8hA8oqja3iO0PTEebmrnB4fKM7QXbXymnjf13rTKlwHEHDAFiRMEMSfjtWz4bwo3rZf0lu2QYCOWBYQCGBCkZTMT4Gs3xDCh1zKOuBOn1h9k957qRZ4xisg9FefqhVCamdNMvs2oLG/cZY6rNqZCldI03zQfVNQsdiXZCq23DaanLG+v1jTpx2LsWw97A2SrGfSXMO0mdgSGAHhIE05h+kLNljDYETI/7vsQCR9eqKMXrydpsq+OXXw2rYfR9xnCi41vFX7lomPRXEdVRdyUJC5lJ5GY0jTSaq3xWG9IUtB3YkQgyoFOWEQyBOknz76t/23Zy5WsWmZ0ljkSA4MSNJE6EwfnQeocd46nD0VDfL3HBKC+6woXQsSihm1IEH2iKzh6d3TtiMOe5VEkk8gBJNU/CuIW7mt1LJK7FkTVAJKkRB5x3E1dYjh2AZ8k2BpnV1UAo6sIhlEkHQ5duqe+r/AAn1Ffp9itgV3I1QToY2NRl+kfFI0nNcUbxbUqPWIJ9U1kbdxn1c9ZiSSOQJJMEeyfGn1sXCmdUOQaSIA03CiZMeE1naPbeinSK3jrHpE0IMMvceR8jr7COVX1eKfR1xM4fHBAJTEgKVmALmYdf2E6eJr2uqCiiigKKKKAooooCiiigruO4n0eGuvlLZUbqjck6AD1mvOcR0ha3Bu4e4gJgFp1PdOXU6V6Lx/CNewty2hAd0IQnYNuJ9leJcRu4y4gS6jkKZAIgzqJg77nWoKLj14F2ZS4l3hQyqcpaQYIgiOfjVQbpj+93G6I3fV3iEuBGUB0JVsu46wEgb7kiPXUfg3BuIYlylsSwXP+8ygMJAhWcQTqNJqipNxY6xG57VhfDuNTeG5TLLkMKdVRlMtA56d9IxtrFWLjW7lpAyGGXJaMHzTQ77irJEUQQIPgzwD5Zo91QeqYS5b9GiLcQ5VQAq6kgqBBHjpUm4pZi7MXbLlk5dPLKBrXnPBfROzjEO6jL1IaJaRvPKJqXxrDWLVsNYusxLKCCUIgqSYIEnUb0Gy1mTqTudZPhv/uKLHSjDWLeS8FZ1Z51TbOxUaneIrzL+2OAetyPIfpVX0gvE2xMatyAHeeQqYr1i79JGAtmRZae9Ck+41RdLOmdjH27du0lwZXZ3zDQQsAE95nlIryRuyPNj8B8q1mA0w9pfuM3rZmPwirhqfgMBcxFzJbXM0EwTlHgC3IePdNaTG9FPRFFe6oZkQOqrmto7kiIO4BB6xg8/GqvoiEGKV2cgoxZUDAFzlZY13UBiSKf6WYgvcBIZVd3zPOjrbMIIG2WY9Qq8xlSYzCNZdQey65kOuomDodRqOfeKqsD1MTlGxddOUFlMeGhIncctau8TJwqMVH/MKh51KhT1Y5Af9Kh4DBM183QyAIASCTmIyEGIFZrUuVv8VjUvIUbLldTnGgkRGQzvM76nSvNcTgza1yN+7vPbmIDgq3o3XlspmO8V6Bg7iZl7MBBMgATpO++1YTiqsXuuysFa91ZESAHAInwj21ZxAnA772w4R8iIXLCCArEkMddv0NU2Zw2xkGOz8pqYgHcPYKkI3+9KoZtcYKfUMnflp4U7c4/caQuk6TOsfKm8QJI8qjJb/eEd4BH+/XU0XGEHVgcgAPX/APlXvDrpIdQrBVD5ZMyLYV1bTbdh5VQYU9VvUfjWx4RgwLFy8ECJdDqoDMw/eZFuOGbXKlu31jtmcgbUgidFEy8UsBQdL7QI2U27nwB91e514p0FxGfi9tvttfYD7otuB7mFe10BRRRVBRRRQcoorhNZ0domkFqQ1ymh6mb9hWXKyqw7mAI9hpDX6YfGAVNU3d4FhWBDYe0QdCMij4VTX/o+4c+ossh+5duqPZmj3U5xDpVZskhy8/yPHtiDVPf+kSwvZS63qUD81Oig6c9CzhrYvWHuvbWc6s2dk7nGnZ5Hu079PPxjLKdV7BP3g+p8YIr0699Jq8sOx83H+mvO+kOLt4hy6Ye3ZJ3yZ4P9JOUeoCrNQwnEMGd1xCeWUj3NPup7BWhiLvosMblxy0IhXVlCglyTooBkakbDvqibC1a8I41iMKGFhgmaMzBFzNGwLETHhtVF9e6H8RVSThWIAM5Xsk+pQ5J8hJrNcRtIxCXGe2w3VkIYeatBFWx6aY4733936VGxPSTE3NHuM/8AMZoKk8Psx23MCBCrHf499WuHuqQqrsqBeeuURPmYqI+OLdoKfUK5h7wBkUotcAyC8rPAiSrHNAbKRsoJMgkbHWKt3xOHuBQ4mcrZZJdF1LKFU6NJ15b1QXAGEjY00S0RnaDuMxg+qgm43Eq7KqABUUKInrNzbf1eqedS8GzWrmYHMCIZSIkHdZFV+Gt6zFWKox5UErinGC1spZRULCGYjUDnljn46R3Vm7fDjzOngDWgXAOeVL/ZDmqKuxgbZ06/qn5Cpa4XDr2gT5sw+Qqxs8LvL2bjr5Mw+BqQvC7p7VxzO/WYz76Ch4ytl7SraREZCxkFpcNEhixP2RHdr31mLl2CDzHLvFekpwJY1A9g+NPjgNsnrID8ffUwee4PFrO4g1OF18pRXfIxBKBmyMeRKzBrdp0dwvO2PwI3xIq0wPBsEn2l/ltovwmgd6CHC4awC2X0zSXfJLANH7sMBIUBV0mJmtenG7B+v7Vb9Kp8Pg8DG/rYuP0FTrODwnL0Z83/AFNTRZ2sdbYwrqSeUifZUmagWlsL2fRDxGT41KS8p2ZT5EU0OzRSM47x7aKaA0k05Fcy1lTRFNstSctcy0ENrdNNYqwyVzJQVb4UHcVXYno/YftWUPjlAPtGtaT0dHoqDC3+hGGaYRl8mPzqqxP0eoew7DwIFen+iFc9CKu0eOYn6Pbw7DI3ht8aqMR0MxK72WP8sN+Wa969CO6uegHdV/Q+d7nR66vaRx5qR8aQvAHPKvov0A7qabh9s7oh/pX9Kaj5+Tow58KdXokT9cj1V71+zbX8NPwL+lH7Ntfw0/Av6U0eH2OiZX++fyhfnU+10aQdpnPsHwFew/s21/DT8C/pXf2ba/hp+Bf0p+h5bZ4Si7LUpMGo5V6R+zbX8NPwL+lH7Ntfw0/Cv6U0eeLhh3UsWa9CHD7X8NPwr+lKGBt/YT8K/pTR5+tqli3W8bAWzuifhFd/sSfZUeQA99NGECU6lljspPkCa2n7OT7/AON/1pdvCKuxf8bH500ZO1wq62yN69PjUy10fuHtFF9prUAV2ptVRWujy/Wdj5AD9amJweyPqT5k1Y0U2iIOH2h/dp7AfjTq4ZBsqjyUU9RQJyjuFFKooCiiigKKKKAooooCiiigKKKKgKKKKAooooCiiigKKKKAooooCiiiqCiiikBRRRQFFFFWAoooqAooorQKKKKI/9k="
+                id="autoimg3"
+              />
+            </div>
+            <div class="autotable">
+              <table>
+                <tr>
+                  <td>Модель</td>
+                  <td>Daf 95</td>
+                </tr>
+                <tr>
+                  <td>Грузоподъемность кузова</td>
+                  <td>6 т</td>
+                </tr>
+                <tr>
+                  <td>Длина кузова</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Ширина кузова</td>
+                  <td>-</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>MaxAuto &#9426;</footer>
+    </div>
+    <script type="text/javascript" src="general.js"></script>
+    <script>
+      var image = document.querySelector("img");
+      //исправление дефекта отображения картинки с помощью принудительной перезагрузки 
+      if (image) {
+        if (image.complete) {
+          if (image.height < 100) {
+            location.reload();//перезагрузка страницы
+          }
+        } else {
+          image.onload = function () {
+            if (image.height < 100) {
+              location.reload();
+            }
+          };
+        }
+      } else {
+        console.log("Изображение не найдено");
+      }
+
+      //анимация пунктов меню
+      window.addEventListener("load", () => {
+        if (document.documentElement.clientWidth > 540) {
+          setTimeout(function () {
+            let blinkingElement = document.getElementById("contactslink");
+            let blink = setInterval(function () {
+              blinkingElement.classList.add("blink");
+              setTimeout(() => blinkingElement.classList.remove("blink"), 500);
+            }, 15000);
+          }, 0);
+
+          setTimeout(function () {
+            let blinkingElement1 = document.getElementById("zakazlink");
+            let blink = setInterval(function () {
+              blinkingElement1.classList.add("blink");
+              setTimeout(() => blinkingElement1.classList.remove("blink"), 500);
+            }, 15000);
+          }, 5000);
+
+          setTimeout(function () {
+            let blinkingElement2 = document.getElementById("uslugilink");
+            let blink = setInterval(function () {
+              blinkingElement2.classList.add("blink");
+              setTimeout(() => blinkingElement2.classList.remove("blink"), 500);
+            }, 15000);
+          }, 12000);
+        }
+      });
+
+      //функция для перехода на новую страницу
+      function link(page) {
+        window.location = page;
+      }
+
+      // Создаем объект XMLHttpRequest
+      var xhr = new XMLHttpRequest();
+
+      // Указываем путь к файлу index.xml
+      var url = "index.xml";
+
+      // Открываем соединение
+      xhr.open("GET", url, true);
+
+      // Устанавливаем тип загружаемого файла
+      xhr.setRequestHeader("Content-Type", "application/xml");
+
+      // Обработчик события загрузки XML-файла
+      xhr.onload = function () {
+        // Проверяем статус ответа сервера
+        if (xhr.status === 200) {
+          // Получаем содержимое XML-файла
+          var xmlData = xhr.responseXML;
+
+          // Получаем значения из XML-элементов
+          var infa1Value = xmlData.getElementsByTagName("infa1")[0].textContent;
+          var infa2Value = xmlData.getElementsByTagName("infa2")[0].textContent;
+
+          // Находим элементы с идентификаторами text1 и text2
+          var text1Element = document.getElementById("text1");
+          var text2Element = document.getElementById("text2");
+
+          // Вносим значения в элементы
+          text1Element.textContent = infa1Value;
+          text2Element.textContent = infa2Value;
+        }
+      };
+
+      // Отправляем запрос на загрузку XML-файла
+      xhr.send();
+    </script>
+  </body>
+</html>
